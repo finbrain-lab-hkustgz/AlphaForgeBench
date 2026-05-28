@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AlphaForgeBench: Benchmarking End-to-End Trading Strategy Design with Large Language Models"
+    />
+    <title>AlphaForgeBench</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Noto Sans", sans-serif;
+      }
+
+      .publication-title,
+      .publication-authors,
+      .publication-links,
+      .section-title {
+        font-family: "Google Sans", sans-serif;
+      }
+
+      .publication-title {
+        line-height: 1.14;
+      }
+
+      .publication-authors a,
+      .lab-source a {
+        color: hsl(204, 86%, 53%);
+      }
+
+      .publication-authors a:hover,
+      .lab-source a:hover {
+        text-decoration: underline;
+      }
+
+      .author-block {
+        display: inline-block;
+      }
+
+      .venue-line {
+        color: #b8860b;
+        font-weight: 700;
+      }
+
+      .title-highlight {
+        color: #b8860b;
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      .teaser .hero-body {
+        padding-top: 0.15rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .teaser .image-wrap {
+        width: 108%;
+        margin: 0 auto;
+        transform: translateX(-4%);
+      }
+
+      .teaser img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 6px;
+      }
+
+      .publication-links .button {
+        margin: 0.25rem 0.25rem;
+      }
+
+      .result-card {
+        height: 100%;
+        border: 1px solid #e8e8e8;
+        border-radius: 12px;
+        background: #ffffff;
+        box-shadow: 0 6px 18px rgba(10, 10, 10, 0.06);
+      }
+
+      .result-card .card-content {
+        padding: 1.1rem;
+      }
+
+      .result-card h3 {
+        margin-bottom: 0.4rem;
+      }
+
+      .result-note {
+        color: #666666;
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .table-wrapper {
+        overflow-x: auto;
+      }
+
+      .table-wrapper table {
+        min-width: 700px;
+      }
+
+      .table th,
+      .table td {
+        font-size: 0.93rem;
+        vertical-align: middle;
+      }
+
+      .table thead th {
+        white-space: nowrap;
+      }
+
+      .findings-box {
+        margin-top: 1.25rem;
+        padding: 1.2rem 1.3rem;
+        border-radius: 12px;
+        background: #f6f7f9;
+      }
+
+      .section-soft {
+        background: #ffffff;
+      }
+
+      .figure-copy h3 {
+        margin-bottom: 0.55rem;
+        text-align: left;
+        line-height: 1.16;
+      }
+
+      .figure-copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-intro {
+        margin-bottom: 1.5rem;
+      }
+
+      .section-intro p:last-child {
+        margin-bottom: 0;
+      }
+
+      .figure-visual img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .figure-copy {
+        padding: 0.35rem 0 0.35rem 1rem;
+      }
+
+      .tau-token {
+        color: #b8860b;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .findings-box p {
+        margin-bottom: 0.8rem;
+      }
+
+      .findings-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .bibtex-section pre {
+        border-radius: 10px;
+        background: #f5f5f5;
+        padding: 1rem 1.2rem;
+        overflow-x: auto;
+      }
+
+      .lab-source {
+        margin-top: 0.6rem;
+      }
+
+      @media (max-width: 768px) {
+        .publication-title {
+          font-size: 2rem !important;
+        }
+
+        .figure-copy {
+          padding-left: 0;
+        }
+
+        .teaser .image-wrap {
+          width: 100%;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-2 publication-title">
+                <span class="title-highlight">AlphaForgeBench</span> : Benchmarking End-to-End
+                <br />
+                Trading Strategy Design with Large Language Models
+              </h1>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block venue-line">KDD 2026 (Poster)</span>
+              </div>
+
+              <div class="is-size-5 publication-authors mt-4">
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?hl=zh-CN&user=Zvtt7ZcAAAAJ" target="_blank" rel="noreferrer">Wentao Zhang</a><sup>1,†</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?hl=zh-CN&user=jN8NZWwAAAAJ" target="_blank" rel="noreferrer">Mingxuan Zhao</a><sup>2,†</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/scholar?q=Jincheng+Gao" target="_blank" rel="noreferrer">Jincheng Gao</a><sup>2,†</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?hl=zh-CN&user=N2OEl6EAAAAJ" target="_blank" rel="noreferrer">Jieshun YOU</a><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?hl=zh-CN&user=cQ4Tak0AAAAJ" target="_blank" rel="noreferrer">Huaiyu Jia</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=7VamWHYAAAAJ&hl=zh-CN&oi=ao" target="_blank" rel="noreferrer">Yilei Zhao</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=PEEpuNwAAAAJ&hl=zh-CN" target="_blank" rel="noreferrer">Bo An</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?hl=zh-CN&user=kGgWv8IAAAAJ" target="_blank" rel="noreferrer">Shuo Sun</a><sup>2,‡</sup>
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup> Nanyang Technological University</span>
+                <span class="author-block"><sup>2</sup> The Hong Kong University of Science and Technology (Guangzhou)</span>
+                <span class="author-block"><sup>3</sup> Hong Kong Polytechnic University</span>
+              </div>
+
+              <div class="is-size-6 publication-authors">
+                <span class="author-block"><sup>†</sup> Equal contribution</span>
+                <span class="author-block"><sup>‡</sup> Corresponding author</span>
+              </div>
+
+              <div class="is-size-6 publication-authors lab-source">
+                <span class="author-block">
+                  Project from
+                  <a href="https://github.com/finbrain-lab-hkustgz" target="_blank" rel="noreferrer">FinBrain Lab, HKUST(GZ)</a>.
+                </span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2602.18481"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/finbrain-lab-hkustgz/AlphaForgeBench"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>GitHub</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <div class="image-wrap">
+            <img src="./assets/images/framework.png" alt="The framework of AlphaForgeBench" />
+          </div>
+          <h2 class="subtitle has-text-centered mt-4">
+            AlphaForgeBench reframes financial LLM evaluation from unstable action emission to deterministic strategy
+            code generation, separating financial reasoning from execution.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3 has-text-centered">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                The rapid advancement of Large Language Models (LLMs) has catalyzed the proliferation of diverse
+                financial benchmarks, progressively evolving from static knowledge evaluation to increasingly
+                sophisticated interactive trading simulations. Nevertheless, existing frameworks that assess real-time
+                trading performance largely overlook a fundamental failure mode: the severe behavioral instability
+                exhibited by LLMs in sequential decision-making under financial uncertainty. Through extensive empirical
+                investigation, we demonstrate that when deployed as direct trading agents, LLMs manifest extreme
+                run-to-run variance, produce inconsistent action sequences even under strictly deterministic decoding
+                configurations, and exhibit irrational action flipping across temporally adjacent decision steps. We
+                introduce AlphaForgeBench, a principled evaluation framework that reconceptualizes the role of LLMs
+                from stochastic execution agents to quantitative researchers capable of systematic financial reasoning.
+                Rather than requiring models to emit discrete trading actions, AlphaForgeBench tasks LLMs with
+                generating executable alpha factors and composing factor-based trading strategies grounded in financial
+                domain knowledge. Extensive experiments demonstrate that AlphaForgeBench effectively eliminates
+                execution-induced instability and provides a rigorous benchmark for assessing financial reasoning,
+                strategy formulation, and alpha discovery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3 has-text-centered">Framework Design</h2>
+            <div class="content has-text-justified section-intro">
+              <p>
+                The overall framework of AlphaForgeBench is organized around a simple but important reframing:
+                instead of asking LLMs to emit step-by-step trading actions directly, we ask them to behave like
+                quantitative researchers that generate executable alpha factors and factor-based trading strategies.
+                This decouples financial reasoning from sequential action noise and turns evaluation into a stable,
+                replayable code-generation problem.
+              </p>
+              <p>
+                <strong>Stage 1</strong> collects natural-language financial queries with ground-truth alpha factors
+                and trading strategies from real-world sources. <strong>Stage 2</strong> systematically generates
+                augmented queries across a <strong>3 × 3 level-grade taxonomy</strong>, so the benchmark moves from
+                direct translation to underspecified, goal-oriented strategy design under controlled difficulty.
+              </p>
+              <p>
+                In the evaluation pipeline, each query is fed to the tested model to produce executable factor code
+                and strategy code. The generated implementations are then executed in a standardized backtest engine
+                across seven assets and multiple market regimes, yielding a multi-metric profile over SR, ARR, MDD,
+                CR, SoR, and VOL. Because downstream execution is deterministic, decoding stochasticity is confined to
+                the generation step instead of propagating into unstable action-by-action behavior.
+              </p>
+              <p>
+                Together, these components make it possible to compare frontier models on authentic financial
+                reasoning while still diagnosing how they respond to progressively underspecified strategy-design
+                tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+            <div class="content has-text-justified section-intro">
+              <p>
+                The overall block reveals four key observations that extend and sharpen the Stage 1 findings. The
+                same model ranking observed in Stage 1 recurs, the return-risk inversion persists, the
+                <span class="tau-token">T = 0</span> and <span class="tau-token">T = 0.7</span> columns yield
+                near-identical values across models and metrics, and the benchmark exposes distinct risk profiles
+                rather than a single scalar ordering.
+              </p>
+              <p>
+                The grouped visual analyses further show a monotonically widening inter-model spread across difficulty
+                levels, stable per-model behavior across temperatures, and persistent separation between strong and
+                weak models under repeated generation.
+              </p>
+            </div>
+
+            <div class="columns is-multiline">
+              <div class="column is-12">
+                <div class="result-card">
+                  <div class="card-content">
+                    <h3 class="title is-4">Major Results</h3>
+                    <p class="result-note">
+                      Stage 1 overall performance on 633 real-world queries. Higher is better for SR / ARR / CR / SoR;
+                      lower is better for MDD / VOL.
+                    </p>
+                    <div class="table-wrapper">
+                      <table class="table is-fullwidth is-striped is-hoverable">
+                        <thead>
+                          <tr>
+                            <th>Model</th>
+                            <th>SR ↑</th>
+                            <th>ARR ↑</th>
+                            <th>MDD ↓</th>
+                            <th>CR ↑</th>
+                            <th>SoR ↑</th>
+                            <th>VOL ↓</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>claude-sonnet-4.5</td>
+                            <td>0.378 ± 0.268</td>
+                            <td>0.138 ± 0.122</td>
+                            <td>0.138 ± 0.122</td>
+                            <td>1.456 ± 1.106</td>
+                            <td>0.636 ± 0.488</td>
+                            <td>0.187 ± 0.165</td>
+                          </tr>
+                          <tr>
+                            <td>deepseek-v3.2</td>
+                            <td>0.329 ± 0.272</td>
+                            <td>0.116 ± 0.122</td>
+                            <td><strong>0.114 ± 0.120</strong></td>
+                            <td><strong>1.575 ± 1.227</strong></td>
+                            <td>0.548 ± 0.494</td>
+                            <td><strong>0.155 ± 0.163</strong></td>
+                          </tr>
+                          <tr>
+                            <td>gemini-3-flash-preview</td>
+                            <td>0.388 ± 0.268</td>
+                            <td>0.142 ± 0.122</td>
+                            <td>0.138 ± 0.119</td>
+                            <td>1.504 ± 1.131</td>
+                            <td>0.648 ± 0.488</td>
+                            <td>0.189 ± 0.161</td>
+                          </tr>
+                          <tr>
+                            <td>gemini-3-pro-preview</td>
+                            <td><strong>0.449 ± 0.262</strong></td>
+                            <td><strong>0.171 ± 0.123</strong></td>
+                            <td>0.174 ± 0.119</td>
+                            <td>1.411 ± 1.165</td>
+                            <td><strong>0.767 ± 0.493</strong></td>
+                            <td>0.237 ± 0.162</td>
+                          </tr>
+                          <tr>
+                            <td>gpt-5.2</td>
+                            <td>0.342 ± 0.279</td>
+                            <td>0.123 ± 0.119</td>
+                            <td>0.122 ± 0.118</td>
+                            <td>1.534 ± 1.386</td>
+                            <td>0.575 ± 0.503</td>
+                            <td>0.166 ± 0.161</td>
+                          </tr>
+                          <tr>
+                            <td>grok-4.1-fast</td>
+                            <td>0.366 ± 0.276</td>
+                            <td>0.135 ± 0.122</td>
+                            <td>0.142 ± 0.124</td>
+                            <td>1.396 ± 1.038</td>
+                            <td>0.618 ± 0.500</td>
+                            <td>0.192 ± 0.168</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column is-12">
+                <div class="result-card">
+                  <div class="card-content">
+                    <h3 class="title is-4">Structured Query Evaluation</h3>
+                    <p class="result-note">
+                      Stage 2 overall performance on 270 LLM-augmented queries at
+                      <span class="tau-token">T = 0.7</span>. The near-match to the
+                      <span class="tau-token">T = 0</span> block in the paper supports temperature-invariant
+                      evaluation.
+                    </p>
+                    <div class="table-wrapper">
+                      <table class="table is-fullwidth is-striped is-hoverable">
+                        <thead>
+                          <tr>
+                            <th>Model</th>
+                            <th>SR ↑</th>
+                            <th>ARR ↑</th>
+                            <th>MDD ↓</th>
+                            <th>CR ↑</th>
+                            <th>SoR ↑</th>
+                            <th>VOL ↓</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>claude-sonnet-4.5</td>
+                            <td>0.508 ± 0.266</td>
+                            <td>0.162 ± 0.113</td>
+                            <td>0.147 ± 0.110</td>
+                            <td>1.634 ± 0.620</td>
+                            <td>0.795 ± 0.471</td>
+                            <td>0.202 ± 0.152</td>
+                          </tr>
+                          <tr>
+                            <td>deepseek-v3.2</td>
+                            <td>0.424 ± 0.289</td>
+                            <td>0.130 ± 0.112</td>
+                            <td>0.123 ± 0.109</td>
+                            <td>1.570 ± 0.761</td>
+                            <td>0.660 ± 0.489</td>
+                            <td>0.168 ± 0.150</td>
+                          </tr>
+                          <tr>
+                            <td>gpt-5.2</td>
+                            <td>0.417 ± 0.308</td>
+                            <td>0.130 ± 0.121</td>
+                            <td><strong>0.117 ± 0.114</strong></td>
+                            <td>1.660 ± 0.821</td>
+                            <td>0.643 ± 0.522</td>
+                            <td><strong>0.160 ± 0.157</strong></td>
+                          </tr>
+                          <tr>
+                            <td>gemini-3-flash-preview</td>
+                            <td>0.530 ± 0.264</td>
+                            <td>0.165 ± 0.113</td>
+                            <td>0.151 ± 0.111</td>
+                            <td>1.658 ± 1.384</td>
+                            <td>0.820 ± 0.468</td>
+                            <td>0.206 ± 0.153</td>
+                          </tr>
+                          <tr>
+                            <td>gemini-3-pro-preview</td>
+                            <td><strong>0.627 ± 0.242</strong></td>
+                            <td><strong>0.209 ± 0.107</strong></td>
+                            <td>0.188 ± 0.104</td>
+                            <td>1.639 ± 0.651</td>
+                            <td><strong>0.999 ± 0.439</strong></td>
+                            <td>0.259 ± 0.143</td>
+                          </tr>
+                          <tr>
+                            <td>grok-4.1-fast</td>
+                            <td>0.429 ± 0.267</td>
+                            <td>0.135 ± 0.107</td>
+                            <td>0.127 ± 0.102</td>
+                            <td><strong>1.692 ± 0.819</strong></td>
+                            <td>0.668 ± 0.457</td>
+                            <td>0.173 ± 0.140</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-vcentered mt-5">
+              <div class="column is-7">
+                <div class="figure-visual">
+                  <img src="./assets/results/model_radar_0.7.png" alt="Multi-metric radar profiles on LLM-augmented queries" />
+                </div>
+              </div>
+              <div class="column is-5">
+                <div class="figure-copy content has-text-justified">
+                  <h3 class="title is-4">Multi-metric Radar Profiles on LLM-Augmented Queries</h3>
+                  <p>
+                    At <span class="tau-token">τ = 0.7</span>, the radar profile still preserves a clear
+                    return-risk structure across all five metrics. <strong>gemini-3-pro-preview</strong> spans the
+                    broadest polygon on return-oriented axes, while more conservative models remain extended on the
+                    drawdown side, showing that model differences are visible even under stochastic decoding.
+                  </p>
+                  <p>
+                    <strong>Distinct risk profiles remain clearly separated.</strong> The aggressive, balanced, and
+                    conservative archetypes are still readable in this setting, which means the benchmark continues to
+                    expose differences in strategy-generation behavior rather than collapsing models into a single
+                    average pattern.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-vcentered mt-5">
+              <div class="column is-5">
+                <div class="figure-copy content has-text-justified">
+                  <h3 class="title is-4">Aligned Cumulative Return Curves on LLM-Augmented Queries</h3>
+                  <p>
+                    At <span class="tau-token">τ = 0.7</span>, the aligned cumulative return curves still show
+                    <strong>persistent and substantial inter-model separation</strong>. The vertical gap between the
+                    strongest and weakest trajectories remains much larger than any individual uncertainty band,
+                    indicating that performance gaps are driven by capability differences rather than random variation.
+                  </p>
+                  <p>
+                    <strong>Shaded bands denote the 25th–75th percentile range over 5 runs.</strong> Even under
+                    sampling, the bands remain comparatively narrow and the ordering stays visually stable, which shows
+                    that the augmented-query setting continues to separate strong and weak models in a reproducible way.
+                  </p>
+                </div>
+              </div>
+              <div class="column is-7">
+                <div class="figure-visual">
+                  <img src="./assets/results/aligned_0.7.png" alt="Aligned cumulative return curves on LLM-augmented queries" />
+                </div>
+              </div>
+            </div>
+
+            <div class="findings-box content has-text-justified">
+              <p>
+                <strong>Temperature-invariant evaluation.</strong> The
+                <span class="tau-token">τ = 0</span> and <span class="tau-token">τ = 0.7</span> results are
+                near-identical across models, metrics, and difficulty levels.
+              </p>
+              <p>
+                <strong>Systematic difficulty progression.</strong> The inter-model spread widens monotonically from
+                Level 1 through Level 3, confirming that the 3 × 3 taxonomy separates models along a controlled
+                cognitive-demand axis.
+              </p>
+              <p>
+                <strong>Cross-level ranking reversals reveal dissociable capabilities.</strong> Translation-strong
+                models do not necessarily remain strong on open-ended strategy design, and vice versa.
+              </p>
+              <p>
+                <strong>Three archetypal risk profiles are intrinsic and reproducible.</strong> The aggressive,
+                balanced-stable, and conservative-rigid patterns persist across stages, assets, and decoding regimes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3 has-text-centered">Conclusion</h2>
+            <div class="content has-text-justified">
+              <p>
+                We presented AlphaForgeBench, a benchmark that reframes LLM evaluation in quantitative finance from
+                black-box action emission to white-box strategy code generation, requiring models to produce executable
+                alpha factors and trading strategies that are evaluated via standardized backtesting. Experiments on 903
+                queries (633 real-world + 270 difficulty-stratified via a 3 × 3 level–grade taxonomy), six frontier
+                LLMs, and seven assets spanning cryptocurrency and US equity markets (35,190 total implementations)
+                demonstrate that the code-generation paradigm is temperature-invariant, highly reproducible, and more
+                discriminative than direct-trading baselines. Key findings include a monotonically widening capability
+                spread across difficulty levels, cross-level ranking reversals exposing dissociable cognitive skills,
+                and three archetypal risk profiles that persist across stages, assets, and decoding regimes. Future
+                work will expand AlphaForgeBench to multi-asset portfolio queries and additional asset classes,
+                establish live-market forward-testing, and support iterative strategy refinement via backtest feedback,
+                bridging the gap to real-world deployment and providing a foundation for rigorous financial AI
+                assessment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bibtex-section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>@inproceedings{zhang2026alphaforgebench,
+  title={AlphaForgeBench: Benchmarking End-to-End Trading Strategy Design with Large Language Models},
+  author = {Zhang, Wentao and Zhao, Mingxuan and Gao, Jincheng and You, Jieshun and Jia, Huaiyu and Zhao, Yilei and An, Bo and Sun, Shuo},
+  booktitle={Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  year={2026}
+}</code></pre>
+      </div>
+    </section>
+  </body>
+</html>

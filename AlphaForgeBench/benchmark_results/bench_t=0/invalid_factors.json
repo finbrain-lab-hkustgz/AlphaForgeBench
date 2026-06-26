@@ -1,0 +1,247 @@
+{
+  "summary": {
+    "total_invalid_factors": 10,
+    "total_affected_samples": 23,
+    "total_computed_factors": 9
+  },
+  "computed_factors": [
+    "imxd_40",
+    "mfi_30",
+    "mfi_7",
+    "min_25",
+    "qtlu_100",
+    "rank_8",
+    "rsv_50",
+    "std_2",
+    "wvma_50"
+  ],
+  "invalid_factors": [
+    {
+      "factor_name": "columnsifcol",
+      "reason": "Cannot parse factor name: 'columnsifcol'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L2_medium_24_1"
+      ]
+    },
+    {
+      "factor_name": "entry_bar",
+      "reason": "Cannot parse factor name: 'entry_bar'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L3_easy_0_2"
+      ]
+    },
+    {
+      "factor_name": "entry_atr",
+      "reason": "Cannot parse factor name: 'entry_atr'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L3_easy_0_2"
+      ]
+    },
+    {
+      "factor_name": "entry_price",
+      "reason": "Cannot parse factor name: 'entry_price'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L3_easy_0_2",
+        "openrouter/deepseek-v3.2_L3_medium_20_3"
+      ]
+    },
+    {
+      "factor_name": "adx_20",
+      "reason": "Unknown factor type: 'adx'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L3_easy_18_2",
+        "openrouter/deepseek-v3.2_L3_medium_11_1",
+        "openrouter/deepseek-v3.2_L3_medium_24_2",
+        "openrouter/deepseek-v3.2_L3_medium_3_4"
+      ]
+    },
+    {
+      "factor_name": "adx_14",
+      "reason": "Unknown factor type: 'adx'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L3_easy_18_4",
+        "openrouter/deepseek-v3.2_L3_easy_22_2",
+        "openrouter/deepseek-v3.2_L3_medium_12_0",
+        "openrouter/deepseek-v3.2_L3_medium_19_4",
+        "openrouter/deepseek-v3.2_L3_medium_25_0",
+        "openrouter/gemini-3-pro-preview_L3_easy_0_1",
+        "openrouter/gemini-3-pro-preview_L3_easy_0_3",
+        "openrouter/gemini-3-pro-preview_L3_easy_18_1",
+        "openrouter/gemini-3-pro-preview_L3_easy_18_4",
+        "openrouter/gemini-3-pro-preview_L3_easy_22_1",
+        "openrouter/gemini-3-pro-preview_L3_easy_22_2",
+        "openrouter/gemini-3-pro-preview_L3_hard_25_4"
+      ]
+    },
+    {
+      "factor_name": "max_drawdown",
+      "reason": "Cannot parse factor name: 'max_drawdown'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L3_easy_20_3"
+      ]
+    },
+    {
+      "factor_name": "bb_width",
+      "reason": "Cannot parse factor name: 'bb_width'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L3_medium_21_4"
+      ]
+    },
+    {
+      "factor_name": "adx_50",
+      "reason": "Unknown factor type: 'adx'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L3_medium_24_4"
+      ]
+    },
+    {
+      "factor_name": "std_n",
+      "reason": "Cannot parse factor name: 'std_n'",
+      "affected_samples": [
+        "openrouter/gpt-5.2_L2_medium_5_1"
+      ]
+    }
+  ],
+  "affected_samples": [
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L2_medium_24_1",
+      "invalid_factors": [
+        "columnsifcol"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_easy_0_2",
+      "invalid_factors": [
+        "entry_bar",
+        "entry_atr",
+        "entry_price"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_20_3",
+      "invalid_factors": [
+        "entry_price"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_easy_18_2",
+      "invalid_factors": [
+        "adx_20"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_11_1",
+      "invalid_factors": [
+        "adx_20"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_24_2",
+      "invalid_factors": [
+        "adx_20"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_3_4",
+      "invalid_factors": [
+        "adx_20"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_easy_18_4",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_easy_22_2",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_12_0",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_19_4",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_25_0",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_easy_0_1",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_easy_0_3",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_easy_18_1",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_easy_18_4",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_easy_22_1",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_easy_22_2",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_hard_25_4",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_easy_20_3",
+      "invalid_factors": [
+        "max_drawdown"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_21_4",
+      "invalid_factors": [
+        "bb_width"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_24_4",
+      "invalid_factors": [
+        "adx_50"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gpt-5.2_L2_medium_5_1",
+      "invalid_factors": [
+        "std_n"
+      ]
+    }
+  ]
+}

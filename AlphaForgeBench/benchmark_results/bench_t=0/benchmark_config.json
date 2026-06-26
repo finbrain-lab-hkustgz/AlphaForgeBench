@@ -1,0 +1,50 @@
+{
+  "models": [
+    "openrouter/gemini-3-flash-preview",
+    "openrouter/deepseek-v3.2",
+    "openrouter/claude-sonnet-4.5",
+    "openrouter/gemini-3-pro-preview",
+    "openrouter/gpt-5.2",
+    "openrouter/grok-4.1-fast"
+  ],
+  "num_samples": 5,
+  "temperature": 0.0,
+  "query_levels": [
+    "L1_easy",
+    "L1_medium",
+    "L1_hard",
+    "L2_easy",
+    "L2_medium",
+    "L2_hard",
+    "L3_easy",
+    "L3_medium",
+    "L3_hard"
+  ],
+  "query_file": "AlphaForgeBench/generated_queries/openai-gpt-5.2/generated_queries_filtered_top30.json",
+  "results_dir": "AlphaForgeBench/benchmark_results",
+  "benchmark_id": "bench_t=0",
+  "system_prompt_path": "AlphaForgeBench/prompts/system_prompt.txt",
+  "backtest": {
+    "data_config": {
+      "asset_name": "market",
+      "data_type": "price",
+      "level": "1day"
+    },
+    "start_ts": "2021-01-01 00:00:00",
+    "end_ts": "2026-01-01 00:00:00",
+    "history_ts": 300,
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "AAPL",
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "TSLA"
+    ],
+    "data_path": "datasets/market"
+  },
+  "max_concurrent_requests": 16,
+  "retry_failed": true,
+  "save_intermediate": true
+}

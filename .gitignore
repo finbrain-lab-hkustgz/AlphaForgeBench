@@ -1,0 +1,63 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment / secrets — NEVER commit real keys
+.env
+.env.*
+!.env.template
+
+# OS junk
+.DS_Store
+**/.DS_Store
+
+# Datasets — hosted on HuggingFace (see README "Data" section), pulled into datasets/ locally
+/datasets/
+
+# Runtime scratch / generated outputs (top-level only — keep docs/ website assets)
+/outputs/
+/workdir/
+/results/
+/figures/
+/latex/
+
+# Benchmark runtime results — keep ONLY the two shipped reference sets, ignore new runs
+AlphaForgeBench/benchmark_results/*
+!AlphaForgeBench/benchmark_results/bench_t=0/
+!AlphaForgeBench/benchmark_results/bench_t=0.7/
+# the bulky answers / per-query metrics live on HuggingFace, not in git
+AlphaForgeBench/benchmark_results/bench_t=0/extracted_codes.json
+AlphaForgeBench/benchmark_results/bench_t=0/query_metrics.json
+AlphaForgeBench/benchmark_results/bench_t=0.7/extracted_codes.json
+AlphaForgeBench/benchmark_results/bench_t=0.7/query_metrics.json
+AlphaForgeBench/benchmark_results/*/samples/
+AlphaForgeBench/benchmark_results/*/cache/
+
+# Caches / tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.cache/
+
+# IDE
+.idea/
+.vscode/
+
+# Paper draft / PDFs (not part of the code release)
+*.pdf

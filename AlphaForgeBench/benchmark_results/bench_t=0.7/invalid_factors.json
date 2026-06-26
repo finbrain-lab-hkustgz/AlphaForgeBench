@@ -1,0 +1,249 @@
+{
+  "summary": {
+    "total_invalid_factors": 16,
+    "total_affected_samples": 19,
+    "total_computed_factors": 0
+  },
+  "computed_factors": [],
+  "invalid_factors": [
+    {
+      "factor_name": "cnt_val",
+      "reason": "Cannot parse factor name: 'cnt_val'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L1_hard_3_3"
+      ]
+    },
+    {
+      "factor_name": "iloc_minus_two_is_the_minus_two_index_referring_to_two_bars_back_from_current_bar_at_minus_one_index_respectively_therefore_will_access_close_value_at_minus_one_index_for_current_bar_close_price_and_minus_two_index_for_last_bar_close_price_respectively_for_defensive_exit_check_logic_below_as_per_stateless_strategy_constraint_number_eight_no_state_tracking_or_history_inference_only_current_bar_logic_with_one_lookback_for_cross_detection_pattern_shown_in_dataframe_specification_examples_given_by_user_message_content_preceding_assistant_response_json_output_only_as_per_output_format_description_finalized_now_with_code_logic_completion_starting_from_defensive_exit_factor_values_extraction_from_df_dataframe_provided_to_strategy_call_method_argument_named_df_as_per_base_strategy_class_signature_expectation_from_factorstrategyllm_backtesting_system_described_in_prompt_input_context",
+      "reason": "Cannot parse factor name: 'iloc_minus_two_is_the_minus_two_index_referring_to_two_bars_back_from_current_bar_at_minus_one_index_respectively_therefore_will_access_close_value_at_minus_one_index_for_current_bar_close_price_and_minus_two_index_for_last_bar_close_price_respectively_for_defensive_exit_check_logic_below_as_per_stateless_strategy_constraint_number_eight_no_state_tracking_or_history_inference_only_current_bar_logic_with_one_lookback_for_cross_detection_pattern_shown_in_dataframe_specification_examples_given_by_user_message_content_preceding_assistant_response_json_output_only_as_per_output_format_description_finalized_now_with_code_logic_completion_starting_from_defensive_exit_factor_values_extraction_from_df_dataframe_provided_to_strategy_call_method_argument_named_df_as_per_base_strategy_class_signature_expectation_from_factorstrategyllm_backtesting_system_described_in_prompt_input_context'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L1_medium_23_4"
+      ]
+    },
+    {
+      "factor_name": "mac_sig",
+      "reason": "Cannot parse factor name: 'mac_sig'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L1_medium_24_3"
+      ]
+    },
+    {
+      "factor_name": "ema_slow",
+      "reason": "Cannot parse factor name: 'ema_slow'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L1_medium_24_3"
+      ]
+    },
+    {
+      "factor_name": "ema_fast",
+      "reason": "Cannot parse factor name: 'ema_fast'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L1_medium_24_3"
+      ]
+    },
+    {
+      "factor_name": "bb_up",
+      "reason": "Cannot parse factor name: 'bb_up'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L1_medium_24_3"
+      ]
+    },
+    {
+      "factor_name": "mac",
+      "reason": "Cannot parse factor name: 'mac'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L1_medium_24_3"
+      ]
+    },
+    {
+      "factor_name": "stoch",
+      "reason": "Cannot parse factor name: 'stoch'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L2_medium_1_4"
+      ]
+    },
+    {
+      "factor_name": "adx_14",
+      "reason": "Unknown factor type: 'adx'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L3_medium_19_0",
+        "openrouter/deepseek-v3.2_L3_medium_25_2",
+        "openrouter/deepseek-v3.2_L3_medium_3_3",
+        "openrouter/gemini-3-pro-preview_L3_easy_21_3",
+        "openrouter/gemini-3-pro-preview_L3_easy_22_2",
+        "openrouter/gemini-3-pro-preview_L3_medium_20_2",
+        "openrouter/gemini-3-pro-preview_L3_medium_24_0",
+        "openrouter/gemini-3-pro-preview_L3_medium_24_1"
+      ]
+    },
+    {
+      "factor_name": "adx_50",
+      "reason": "Unknown factor type: 'adx'",
+      "affected_samples": [
+        "openrouter/deepseek-v3.2_L3_medium_24_1"
+      ]
+    },
+    {
+      "factor_name": "isnull",
+      "reason": "Cannot parse factor name: 'isnull'",
+      "affected_samples": [
+        "openrouter/gemini-3-flash-preview_L3_hard_11_2"
+      ]
+    },
+    {
+      "factor_name": "adx",
+      "reason": "Cannot parse factor name: 'adx'",
+      "affected_samples": [
+        "openrouter/gemini-3-pro-preview_L3_hard_14_0"
+      ]
+    },
+    {
+      "factor_name": "dx_14",
+      "reason": "Unknown factor type: 'dx'",
+      "affected_samples": [
+        "openrouter/gemini-3-pro-preview_L3_medium_25_0"
+      ]
+    },
+    {
+      "factor_name": "equity",
+      "reason": "Cannot parse factor name: 'equity'",
+      "affected_samples": [
+        "openrouter/gpt-5.2_L3_easy_19_3"
+      ]
+    },
+    {
+      "factor_name": "factor",
+      "reason": "Cannot parse factor name: 'factor'",
+      "affected_samples": [
+        "openrouter/gpt-5.2_L3_hard_15_0"
+      ]
+    },
+    {
+      "factor_name": "regime_orderly",
+      "reason": "Cannot parse factor name: 'regime_orderly'",
+      "affected_samples": [
+        "openrouter/gpt-5.2_L3_medium_18_3"
+      ]
+    }
+  ],
+  "affected_samples": [
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L1_hard_3_3",
+      "invalid_factors": [
+        "cnt_val"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L1_medium_23_4",
+      "invalid_factors": [
+        "iloc_minus_two_is_the_minus_two_index_referring_to_two_bars_back_from_current_bar_at_minus_one_index_respectively_therefore_will_access_close_value_at_minus_one_index_for_current_bar_close_price_and_minus_two_index_for_last_bar_close_price_respectively_for_defensive_exit_check_logic_below_as_per_stateless_strategy_constraint_number_eight_no_state_tracking_or_history_inference_only_current_bar_logic_with_one_lookback_for_cross_detection_pattern_shown_in_dataframe_specification_examples_given_by_user_message_content_preceding_assistant_response_json_output_only_as_per_output_format_description_finalized_now_with_code_logic_completion_starting_from_defensive_exit_factor_values_extraction_from_df_dataframe_provided_to_strategy_call_method_argument_named_df_as_per_base_strategy_class_signature_expectation_from_factorstrategyllm_backtesting_system_described_in_prompt_input_context"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L1_medium_24_3",
+      "invalid_factors": [
+        "mac_sig",
+        "ema_slow",
+        "ema_fast",
+        "bb_up",
+        "mac"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L2_medium_1_4",
+      "invalid_factors": [
+        "stoch"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_19_0",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_25_2",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_3_3",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_easy_21_3",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_easy_22_2",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_medium_20_2",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_medium_24_0",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_medium_24_1",
+      "invalid_factors": [
+        "adx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/deepseek-v3.2_L3_medium_24_1",
+      "invalid_factors": [
+        "adx_50"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-flash-preview_L3_hard_11_2",
+      "invalid_factors": [
+        "isnull"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_hard_14_0",
+      "invalid_factors": [
+        "adx"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gemini-3-pro-preview_L3_medium_25_0",
+      "invalid_factors": [
+        "dx_14"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gpt-5.2_L3_easy_19_3",
+      "invalid_factors": [
+        "equity"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gpt-5.2_L3_hard_15_0",
+      "invalid_factors": [
+        "factor"
+      ]
+    },
+    {
+      "sample_id": "openrouter/gpt-5.2_L3_medium_18_3",
+      "invalid_factors": [
+        "regime_orderly"
+      ]
+    }
+  ]
+}

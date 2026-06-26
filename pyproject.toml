@@ -1,0 +1,44 @@
+[project]
+name = "alphaforgebench"
+version = "0.1.0"
+description = "AlphaForgeBench — a benchmark for evaluating LLM-generated quantitative trading-strategy code via Pass@k."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+
+# Core dependencies — kept in sync with requirements.txt.
+# Primary install path is `pip install -r requirements.txt`; this table lets you
+# `pip install -e .` / `uv sync` as an alternative.
+dependencies = [
+    "mmengine>=0.10.7",
+    "pandas>=2.3.3",
+    "numpy",
+    "pydantic>=2.12.5",
+    "httpx[socks]>=0.28.1",
+    "rich>=14.3.1",
+    "json-repair>=0.55.1",
+    "dirtyjson>=1.0.8",
+    "tiktoken>=0.12.0",
+    "python-dotenv>=1.2.1",
+    "pyarrow>=23.0.0",
+    "tenacity>=9.1.2",
+    "joblib",
+    "psutil>=7.2.0",
+    "aiohttp",
+    "sympy",
+    "mathruler>=0.1.0",
+    "pylatexenc>=2.10",
+    "pandas_market_calendars>=5.2.2",
+    "scikit-learn>=1.8.0",
+    "datasets>=4.4.2",
+    "huggingface_hub",
+    "gym>=0.26.2",
+    "inflection>=0.5.1",
+    "markdownify>=1.2.2",
+    "openai",
+    "akshare>=1.18.3",
+    "tushare>=1.4.24",
+    "alpaca-py>=0.43.2",
+    "binance-connector>=3.12.0",
+    "binance-futures-connector>=4.1.0",
+]
